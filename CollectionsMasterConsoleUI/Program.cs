@@ -79,13 +79,13 @@ namespace CollectionsMasterConsoleUI
             var integerlist = new List<int>();
 
             //DONE: Print the capacity of the list to the console
-            Console.WriteLine(integerlist.Capacity);
+            Console.WriteLine(integerlist.Count);
 
             //DONE: Populate the List with 50 random numbers between 0 and 50 you will need a method for this            
             Populater(integerlist);
 
             //TODO: Print the new capacity
-            Console.WriteLine(integerlist.Capacity);
+            Console.WriteLine(integerlist.Count);
 
             Console.WriteLine("---------------------");
 
@@ -136,7 +136,7 @@ namespace CollectionsMasterConsoleUI
 
             integerlist.Sort();
 
-            Console.WriteLine(integerlist);
+            NumberPrinter(integerlist);
             Console.WriteLine("------------------");
 
             //Done: Convert the list to an array and store that into a variable
@@ -165,7 +165,7 @@ namespace CollectionsMasterConsoleUI
             {
                 if(integerlist[a] % 2 != 0)
                 {
-                    integerlist.RemoveAt(a);
+                    integerlist[a] = 0;
                 }
             }
         }
@@ -185,7 +185,7 @@ namespace CollectionsMasterConsoleUI
         private static void Populater(List<int> numberList)
         {
 
-            for(int i = 0; i < 51; i++)
+            for(int i = 0; i < 50; i++)
             {
                 Random rng = new Random();
                 numberList.Add(rng.Next(50));
