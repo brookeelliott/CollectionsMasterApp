@@ -128,6 +128,7 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("Evens Only!!");
 
             OddKiller(integerlist);
+            NumberPrinter(integerlist);
 
             Console.WriteLine("------------------");
 
